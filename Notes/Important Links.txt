@@ -1,2 +1,8 @@
 Spring Application Properties Documentation:
 https://docs.spring.io/spring-boot/appendix/application-properties/index.html#appendix.application-properties.security
+
+Spring Security JDBC DDL:
+https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/jdbc.html
+
+Free MySQL DB website:
+https://www.freemysqlhosting.net/
