@@ -75,10 +75,10 @@ public class ProjectSecurityConfig {
     *
     * This can only be used for small projects and projects
     * where everyone is following the spring security table structure.*/
-    @Bean
-    public UserDetailsService userDetailsService(DataSource dataSource) {
-        return new JdbcUserDetailsManager(dataSource);
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService(DataSource dataSource) {
+//        return new JdbcUserDetailsManager(dataSource);
+//    }
 
     /*
      * NoOpPasswordEncoder is not recommended for production usage.
