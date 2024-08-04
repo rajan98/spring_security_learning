@@ -1,0 +1,11 @@
+Initial Setup:
+* After adding the Spring security dependency we can go to "SecurityProperties.java" to check the default implementation. Here User is hardcoded and password is randomly generated UUID.
+ 
+* We can assign our own properties by using the prefix defined at class level inside "@ConfigProperties(prefix="spring.security")", after the prefix we need to add the class name i.e User and then the variable name.
+Ex - 
+spring.security.user.name=${SECURITY_USERNAME:batman}
+spring.security.user.password=${SECURITY_PASSWORD:darknight}
+
+* Further documentation can be seen in below link:
+https://spring.io/projects/spring-boot#learn
+Learn -> Select latest version -> Appendex -> Common Application Properties -> On the left hand side Select "Security Properties".

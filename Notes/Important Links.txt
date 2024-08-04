@@ -1,3 +1,8 @@
 GitHub Repo:
 https://github.com/eazybytes/springsecurity6
 
+Spring Boot Doc:
+https://spring.io/projects/spring-boot#learn
+
+Spring Security application.property doc (3.3.2):
+https://docs.spring.io/spring-boot/appendix/application-properties/index.html#appendix.application-properties.security
