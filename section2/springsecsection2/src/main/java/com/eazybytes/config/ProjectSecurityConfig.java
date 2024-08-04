@@ -22,6 +22,13 @@ public class ProjectSecurityConfig {
         http.authorizeHttpRequests((requests) -> requests
                 .requestMatchers("/myAccount", "/myBalance", "/myLoans", "/myCards").authenticated()
                 .requestMatchers("/contact", "/notices", "/error").permitAll());
+
+        /* we can disable the default form login to remove the redirection to
+        * the login page. Instead it will use HTTP basic login.
+        * http.formLogin(flc -> flc.disable());
+        * To disable HTTP basic login we can use below code
+        * http.httpBasic(hbc -> hbc.disable());
+        * */
         http.formLogin(withDefaults());
         http.httpBasic(withDefaults());
         return http.build();

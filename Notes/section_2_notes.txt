@@ -2,3 +2,9 @@
 
 * To Create our own custom filter we need to Create config class for our project and overwrite the "SecurityFilterChain" Bean.
 Here we can use ".requestMatchers("patterms")" with ".authenticate()", ".permitAll()" or ".denyAll()" method to create our own custome SecurityFilterChain to handle the HTTP requests.
+
+* We can disable the form login by using the below code instead of the Default.
+http.formLogin(flc -> flc.disable());
+This will disable the default login page and the request will now go through "BasicAuthenticationFilter.java". Here the HTTP basic authentication mechanism will be used.
+We can disable the HTTP basic authentication as well by using the below code:
+http.httpBasic(hbc -> hbc.disable());
