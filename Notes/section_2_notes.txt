@@ -1,3 +1,4 @@
 * To filter out the API's for security Spring Security has "SpringBottWebSecurityConfiguration.java" in this we have Bean created for "SecurityFilterChain" which has default HTTP requests that need authentication. By Default it secure all the incoming requests.
 
-* To Create our own custom filter we need to Create config class for our project and overwrite the SecurityFilterChain Bean.
+* To Create our own custom filter we need to Create config class for our project and overwrite the "SecurityFilterChain" Bean.
+Here we can use ".requestMatchers("patterms")" with ".authenticate()", ".permitAll()" or ".denyAll()" method to create our own custome SecurityFilterChain to handle the HTTP requests.

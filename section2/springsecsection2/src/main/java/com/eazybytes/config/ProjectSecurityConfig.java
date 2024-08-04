@@ -14,10 +14,17 @@ public class ProjectSecurityConfig {
 
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((requests) -> requests.anyRequest().authenticated());
+        /* Here .permit All will allow all the request to pass through without authentication.
+        * Similarly we have .denyAll() that will deny all the request regardless of the authentication.
+        * */
+        /* http.authorizeHttpRequests((requests) -> requests.anyRequest().permitAll());
+        http.authorizeHttpRequests((requests) -> requests.anyRequest().denyAll()); */
+        http.authorizeHttpRequests((requests) -> requests
+                .requestMatchers("/myAccount", "/myBalance", "/myLoans", "/myCards").authenticated()
+                .requestMatchers("/contact", "/notices", "/error").permitAll());
         http.formLogin(withDefaults());
         http.httpBasic(withDefaults());
         return http.build();
     }
-    
+
 }
