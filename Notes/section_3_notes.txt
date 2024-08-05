@@ -8,3 +8,6 @@ UserDetailManager provide extra functionality like createUser, updateUser, delet
 
 ** We need to configure password encoder. If we don't have password encoder in place Spring Security will throw an exception to configure the password encoder.
 For demo purpose we can append {noop} in password section:
+
+
+* Current default password encoder recommended by Spring Team is "bcrypt" encoder. So when we create a PasswordEncoder Bean it will take "bcrypt" as default encoder.

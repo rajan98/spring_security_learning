@@ -8,6 +8,9 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -40,9 +43,14 @@ public class ProjectSecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        UserDetails user = User.withUsername("batman").password("{noop}darknight").authorities("admin").build();
+        UserDetails user = User.withUsername("batman").password("{bcrypt}$2a$12$/cPxSX0DkO0E023oaY1KsOJWTR5JSVzaOqlxsO9b8oSHHhpvI0/DC").authorities("admin").build();
         UserDetails user2 = User.withUsername("superman").password("{noop}clark").authorities("read").build();
         return new InMemoryUserDetailsManager(user, user2);
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 
 }
