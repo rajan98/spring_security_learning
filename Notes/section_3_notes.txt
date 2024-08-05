@@ -1,0 +1,10 @@
+* To create our own users without application.properties we can create bean of "UserDetailsService" this service has method "loadUserByUsername" and is used to authenticate the user. This is extended by different classes like JdbcUserDetailManager, InMemoryUserDetailManager, UserDetailManager etc.
+UserDetailManager provide extra functionality like createUser, updateUser, deleteUser, changePassword, userExists.
+
+* The return type for this loadUserByUsername is "UserDetails" interface, this is extended by "User" so we can use object of User to manually create Users. We can create multiple users like this.
+	UserDetails user = User.withUsername("batman").password("darknight").authorities("read").build();
+ - At last we just need to create an object of InMemoryUserDetailsManager() and pass all the users created.
+ - It stores the users in an Map.
+
+** We need to configure password encoder. If we don't have password encoder in place Spring Security will throw an exception to configure the password encoder.
+For demo purpose we can append {noop} in password section:
