@@ -154,6 +154,155 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Section3",
+			"item": [
+				{
+					"name": "myAccount",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "darknight@0987",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "batman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/myAccount",
+							"path": [
+								"myAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "myCards",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "darknight@0987",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "batman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/myCards",
+							"path": [
+								"myCards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "myBalance",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "darknight@0987",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "batman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/myBalance",
+							"path": [
+								"myBalance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "myLoans",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "darknight@0987",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "batman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/myLoans",
+							"path": [
+								"myLoans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/notices",
+							"path": [
+								"notices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contact",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/contact",
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
